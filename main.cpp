@@ -3,19 +3,29 @@
 
 using namespace std;
 
-void func(int &num)
-{
-    num = 66;
-}
 int main()
 {
 
-    int num = 99;
+    string str  = "12131451112";
 
-    int &num_1 = num;   //引用，在定义时赋值
-    cout << num_1 << endl;
+    int finded = -1;
+    for( int i=0; i<(int)str.length(); i++)
+    {
+            while(1)
+            {
+                finded = str.find_last_of(str[i]);
+                if(finded != -1 && finded != i)     //not found or not self
+                {
 
-    func(num);      //num  change
-    cout << num_1 << endl;
+                    str.erase(finded,1);
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+    }
+    cout << str <<endl;
     return 0;
 }
