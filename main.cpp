@@ -3,26 +3,19 @@
 
 using namespace std;
 
+void func(int &num)
+{
+    num = 66;
+}
 int main()
 {
-    double f = 1111111.111;
-    cout << f <<endl;
 
-    cout.setf(ios_base::scientific,ios_base::floatfield);
+    int num = 99;
 
-    cout << f <<endl;
+    int &num_1 = num;   //引用，在定义时赋值
+    cout << num_1 << endl;
 
-    string str = "abcDgF";
-
-    for(unsigned int i =0;i<str.length();i++)
-    {
-        if(str[i]>='a' && str[i] <='z')
-        {
-
-            str[i] = toupper(str[i]);
-        }
-    }
-
-    cout << str << endl;
+    func(num);      //num  change
+    cout << num_1 << endl;
     return 0;
 }
