@@ -1,24 +1,21 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 
 using namespace std;
 
-//condition: parameter num and type different
-//wrong:     different return value
-void show(int num)
-{
-    cout << "int " << num << endl;
-}
-void show(string str)
-{
-    cout << "str " << str << endl;
-}
 int main()
 {
+    fstream file ;
+    file.open("test.txt",ios_base::out);
 
-    show(5);
+    if(file.is_open())
+        cout << "file open success";
+    else
+        cout << "file open error";
 
-    string str = "*********";
-    show(str);
+    string str = "hello fstream!";
+    file.write(str.data(),str.length());
+    file.close();
     return 0;
 }
