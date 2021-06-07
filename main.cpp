@@ -1,22 +1,17 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
-using  std::cout;
-namespace G
-{
-
-    int a = 10;
-}
-namespace G
-{
-    int b = 11;
-}
 
 int main()
 {
 
-    cout << "are u ok?" << endl;
-    cout << G::a  << "adad" << endl;
-    cout << G::b <<endl;
+    string s;
+    cin >> s;
+
+    s.append(6,'&');
+
+    cout << s.length() << endl;
+    cout << s <<endl;
     return 0;
 }
