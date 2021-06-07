@@ -5,13 +5,24 @@ using namespace std;
 
 int main()
 {
+    double f = 1111111.111;
+    cout << f <<endl;
 
-    string s;
-    cin >> s;
+    cout.setf(ios_base::scientific,ios_base::floatfield);
 
-    s.append(6,'&');
+    cout << f <<endl;
 
-    cout << s.length() << endl;
-    cout << s <<endl;
+    string str = "abcDgF";
+
+    for(unsigned int i =0;i<str.length();i++)
+    {
+        if(str[i]>='a' && str[i] <='z')
+        {
+
+            str[i] = toupper(str[i]);
+        }
+    }
+
+    cout << str << endl;
     return 0;
 }
