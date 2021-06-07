@@ -3,15 +3,22 @@
 
 using namespace std;
 
-//error (int num1 = 321,int num2)
-
-void f(int num1 = 321,int num2 = 123)
+//condition: parameter num and type different
+//wrong:     different return value
+void show(int num)
 {
-    cout << num1 << " " << num2 <<endl;
+    cout << "int " << num << endl;
+}
+void show(string str)
+{
+    cout << "str " << str << endl;
 }
 int main()
 {
 
-    f(10);
+    show(5);
+
+    string str = "*********";
+    show(str);
     return 0;
 }
