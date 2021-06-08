@@ -1,21 +1,18 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include "kitty.h"
 
 using namespace std;
 
 int main()
 {
-    fstream file ;
-    file.open("test.txt",ios_base::out);
+    kitty * firstCat = new kitty('m');
 
-    if(file.is_open())
-        cout << "file open success";
-    else
-        cout << "file open error";
+    firstCat->Color = kitty::black;
 
-    string str = "hello fstream!";
-    file.write(str.data(),str.length());
-    file.close();
+    delete firstCat;
+
+
     return 0;
 }
