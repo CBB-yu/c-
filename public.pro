@@ -4,8 +4,6 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        kitty.cpp \
         main.cpp
 
-HEADERS += \
-    kitty.h
+HEADERS +=
