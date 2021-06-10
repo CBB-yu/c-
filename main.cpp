@@ -8,20 +8,14 @@ using namespace std;
 class A
 {
 public:
-    int a;
-    void f() const;
+    virtual void vFunc();   //普通虚函数，默认的方法
+    virtual void vFunc1()=0;  //纯虚函数，派生类必须复写
 };
 
-//函数内部不会修改任何数据
-void A::f() const
-{
-    //a = 21;         //read-only
-    cout << a << endl;
-}
+
 int main()
 {
-    A a;
-    a.f();
+
 
     return 0;
 }
