@@ -7,12 +7,12 @@ using namespace std;
 
 int main()
 {
-    kitty * firstCat = new kitty('m');
 
-    firstCat->Color = kitty::black;
+    int a = 10;
+    int &b = a;
 
-    delete firstCat;
+    int *c = &b;
 
-
+    cout << c << "  "<< &a <<"  "<< &b<<endl;
     return 0;
 }
